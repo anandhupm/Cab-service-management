@@ -1,0 +1,125 @@
+<html>
+    <head><title>Register User</title>
+        <link rel="icon" type="image/x-icon" href></head>
+        
+    <body align="center" style="padding:1%; color:rgb(8, 62, 113);" >
+
+        <img src="images/e.jpg" style="float:right;" width="500px" height="100%">
+        
+        <form action="profile.html" method="post">
+            <h1>Register User</h1> 
+       <table align="center">
+        <tr>
+            <td><label for =title>Title : </label></td>
+            <td>
+                <select id="title" name="title" style="border-color:#0077b5;border-width: 1px;">
+                    <option value="1" selected>Mr.</option>
+                    <option value="2">Mrs.</option>
+                    <option value="3">Ms.</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="fname">First Name: </label></td>
+            <td><input type="text" id="fname" placeholder="Enter your First name" style="border-color:#0077b5;border-width: 1px;"> </td>
+        </tr>
+        <tr>
+            <td><label for="lname">Last Name: </label></td>
+            <td><input type="text" id="lname" placeholder="Enter your Last name" style="border-color:#0077b5;border-width: 1px;"> </td>
+        </tr>
+        <tr>
+            <td><label for="gender">Gender: </label></thd>
+            <td>
+                <input type="radio" id="male" name="gender" style="border-color:#0077b5;border-width: 1px;"> 
+                <label for="male">Male</label>
+                <input type="radio" id="Female" name="gender" style="border-color:#0077b5;border-width: 1px;">
+                <label for="female">Female</label>
+
+            </td>
+        </tr>
+        <tr>
+            <td><label for="dob">Date of Birth: </label></td>
+            <td><input type="date" id="dob" style="border-color:#0077b5;border-width: 1px;"> </td>
+        </tr>
+        <tr>
+            <td><label for="add">Address: </label></td>
+            <td>
+                <textarea type="text" id="add" placeholder="Enter your Address" rows="6" cols="20" style="border-color:#0077b5;border-width: 1px;"> </textarea>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="mob">Mobile: </label></td>
+            <td><input type="text" id="fname" placeholder="Enter Mobile Number" style="border-color:#0077b5;border-width: 1px;"> </td>
+        </tr>
+        <tr>
+            <td><label for="fname">Email: </label></td>
+            <td><input type="email" id="fname" placeholder="Enter Email" style="border-color:#0077b5;border-width: 1px;"> </td>
+        </tr>
+        <tr>
+            <td><label for="contactu">Can we contact you ? : </label></thd>
+            <td>
+                <input type="radio" id="male" name="com" style="border-color:#0077b5;border-width: 1px;"> 
+                <label for="male">Yes</label>
+                <input type="radio" id="Female" name="com" style="border-color:#0077b5;border-width: 1px;">
+                <label for="female">No</label>
+
+            </td>
+        </tr>
+        <tr>
+            <td><label for="gender">Communication Preference: </label></thd>
+            <td>
+                <input type="checkbox" id="male" name="com" style="border-color:#0077b5;border-width: 1px;"> 
+                <label for="male">Email</label>
+                <input type="checkbox" id="Female" name="com" style="border-color:#0077b5;border-width: 1px;">
+                <label for="female">Whatsapp</label>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="photos">Upload Image: </label>
+            </td>
+            <td>
+                <input type="file" id="photo" name="photo" accept="image/*,*.pdf" style="border-color:#0077b5;">
+            </td>
+        </tr>
+       
+        <tr>
+            <td colspan="2" style="padding:15px;">
+                <input type="checkbox" id="terms">
+                <label for="terms">I agree to the <a href="#" style="text-decoration: none;">terms and conditions</a> of the website.</label>
+        
+            </td>
+            
+        </tr>
+        
+        
+        
+        <tr align="center">
+            <td style="padding:15px;"><input type="submit" style="color:white;background-color:#0077b5; border:none;padding-top:10px;padding-bottom:10px;padding-left:35px;padding-right:35px; border-radius: 5%;" onclick="javascript:setData();"></td>
+            <td><input type="reset" style="color:white;background-color:#0077b5; border:none;padding-top:10px;padding-bottom:10px;padding-left:35px;padding-right:35px; border-radius: 5%;"></td>
+            
+        </tr>
+       </table>
+        </form>
+        <script>
+            function setData(){
+                var fname=document.getElementById('fname').value;
+                var lname=document.getElementById('lname').value;
+                var add=document.getElementById('add').value;
+                localStorage.setItem("fname",fname);
+                localStorage.setItem("lname",lname);
+                localStorage.setItem("add",add);
+
+                
+            }
+            function showData(){
+                var fname=localStorage.getItem('fname');
+                var lname=localStorage.getItem('lname');
+                var add=localStorage.getItem('add');
+                console.log(fname)
+            }
+        </script>
+       
+    </body>
+</html>
